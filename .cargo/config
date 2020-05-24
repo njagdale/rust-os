@@ -1,0 +1,18 @@
+[alias]     # command aliases
+b = "build"
+c = "check"
+t = "test"
+r = "xrun"
+rr = "run --release"
+space_example = ["run", "--release", "--", "\"command list\""]
+
+[build]
+jobs = 4
+target = "intermezzos.json"
+
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
+
+[term]
+verbose = false        # whether cargo provides verbose output
+color = 'auto'         # whether cargo colorizes output

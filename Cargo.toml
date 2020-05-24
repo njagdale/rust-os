@@ -1,0 +1,21 @@
+[package]
+name = "intermezzos"
+version = "0.1.0"
+authors = ["nikhil"]
+edition = "2018"
+
+[dependencies]
+bootloader = "0.6.4"
+
+[[bin]]
+name = "intermezzos"
+test = false
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[package.metadata.bootimage]
+run-command = ["qemu-system-x86_64", "-drive", "format=raw,file=/home/nikhil/pg/os0/src/intermezzos/target/intermezzos/debug/bootimage-intermezzos.bin"]
