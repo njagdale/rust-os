@@ -18,4 +18,4 @@ panic = "abort"
 panic = "abort"
 
 [package.metadata.bootimage]
-run-command = ["qemu-system-x86_64", "-drive", "format=raw,file=/home/nikhil/pg/os0/src/intermezzos/target/intermezzos/debug/bootimage-intermezzos.bin"]
+run-command = ["qemu-system-x86_64", "-drive", "format=raw,file=target/intermezzos/debug/bootimage-intermezzos.bin"]

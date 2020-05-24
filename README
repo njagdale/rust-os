@@ -12,11 +12,13 @@ launch a very simple kernel that prints "Hello Rust" in QEMU.
 Pre-requsities:
 - Ubunut 20.04 (If running on Virtual Box, ensure Nested Virtualization Support is enabled)
 - Install Rust Language, see https://www.rust-lang.org/tools/install 
-- Install QEMU-KVM on Ubuntu, see the following links for steps: (skip the network bridge configuration)
-  https://linuxconfig.org/install-and-set-up-kvm-on-ubuntu-20-04-focal-fossa-linux
-  https://computingforgeeks.com/install-kvm-hypervisor-on-ubuntu-focal-fossa/
-  https://www.how2shout.com/how-to/how-to-install-kvm-on-ubuntu-20-04-graphical-headless-server.html
-- Explicitly enable Nested Virtualization, see "Nested Virtualization" at https://wiki.archlinux.org/index.php/KVM 
+- Install QEMU on Ubuntu, see https://www.qemu.org/download/
+- Setup development environment, see http://intermezzos.github.io/book/second-edition/hello-world/setup.html
+- Setup project, see http://intermezzos.github.io/book/second-edition/hello-world/setting-up-a-project.html
+- Note: Needs additional step for building "$ rustup component add llvm-tools-preview"
 
-How to run the project:
+Run the project:
 $ cargo r 
+
+Expected Output:
+QEMU launches with programmed text displayed.
