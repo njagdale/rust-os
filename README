@@ -15,7 +15,12 @@ Pre-requsities:
 - Install QEMU on Ubuntu, see https://www.qemu.org/download/
 - Setup development environment, see http://intermezzos.github.io/book/second-edition/hello-world/setup.html
 - Setup project, see http://intermezzos.github.io/book/second-edition/hello-world/setting-up-a-project.html
-- Note: Needs additional step for building "$ rustup component add llvm-tools-preview"
+- Notes: Dependencies seems to work only with specific nightly toolchains and components. In order to preserve this execute:
+    $ rustup override set nightly-2020-05-15
+    $ cargo install bootimage
+    $ cargo install cargo-xbuild
+    $ rustup component add rust-src --toolchain=nightly-2020-05-15
+    $ rustup component add llvm-tools-preview
 
 Run the project:
 $ cargo r 
